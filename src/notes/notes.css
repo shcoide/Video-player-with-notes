@@ -1,0 +1,96 @@
+.notes{
+    /* border: 2px solid blue; */
+    margin: 10px 10px;
+    width: 85vw;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.title>h2{
+    font-size: 1.3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: wheat;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+.notes>input{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px 0px;
+}
+.list_note{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    padding: 5px 0px;
+}
+.each_note{
+    border: 1px solid rgba(255, 255, 255, 0.084);
+    width: 100%;
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+}
+.time{
+    display: flex;
+    flex-direction: column;
+}
+.time>span{
+    cursor: pointer;
+}
+.end{
+    align-self: flex-end;
+}
+.add_btn{
+    border: 1px solid wheat;
+    background-color: wheat;
+    color: rgb(0, 0, 0);
+    border-radius: 25px;
+    padding: 7px 8px;
+    font-size: 0.9rem;
+    /* width: 160px; */
+    transition: all .3s;
+    margin: 3px;
+    cursor: pointer;
+}
+.add_btn:hover{
+    color: black;
+    border: 1px solid white;
+    background-color: white;
+}
+.del{
+    background-color: rgba(255, 0, 0, 0.838);
+    width: 70px;
+    color: white;
+    border: 1px solid rgba(255, 0, 0, 0.838);
+    
+}
+.del:hover{
+    border: 1px solid white;
+}
+.edit{
+    background-color: rgba(0, 174, 255, 0.806);
+    width: 70px;
+    color: white;
+    border: 1px solid rgba(0, 174, 255, 0.806);
+
+}
+.edit:hover{
+    border: 1px solid white;
+}
+.bttns{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.content{
+    border: 1px dotted white;
+    padding: 2px 4px;
+    margin: 5px 0px;
+}
