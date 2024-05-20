@@ -15,7 +15,7 @@ function Home() {
   return (
     <div className="Home">
       <header className="Home-header">
-        <h1>Video Player with Notes</h1>
+        <h1 >Video Player with Notes</h1>
         <input
           type="text"
           value={videoId}

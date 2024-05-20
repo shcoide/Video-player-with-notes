@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import YouTube from 'react-youtube';
 import './player.css';
 
 const VideoPlayer = ({ videoId, onTimeUpdate, playerRef }) => {
+  const intervalId = useRef(null);
+
   const opts = {
     playerVars: {
       autoplay: 1,
@@ -16,16 +18,12 @@ const VideoPlayer = ({ videoId, onTimeUpdate, playerRef }) => {
 
   const handleStateChange = (event) => {
     if (event.data === 1) { // When the video is playing
-      const intervalId = setInterval(() => {
+      clearInterval(intervalId.current);
+      intervalId.current = setInterval(() => {
         onTimeUpdate(event.target.getCurrentTime());
       }, 1000);
-
-      // Clear interval on video pause/stop
-      event.target.addEventListener('onStateChange', (newEvent) => {
-        if (newEvent.data !== 1) {
-          clearInterval(intervalId);
-        }
-      });
+    } else {
+      clearInterval(intervalId.current);
     }
   };
 

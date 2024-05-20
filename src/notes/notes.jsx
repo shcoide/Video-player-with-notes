@@ -19,7 +19,7 @@ const Notes = ({ videoId, currentTime, playerRef }) => {
       return;
     }
     if (editingNoteId) {
-      const updatedNotes = notes.map(note => 
+      const updatedNotes = notes.map(note =>
         note.id === editingNoteId ? { ...note, content: newNote } : note
       );
       setNotes(updatedNotes);
